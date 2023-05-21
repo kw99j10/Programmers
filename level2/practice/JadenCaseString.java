@@ -10,7 +10,8 @@ class Solution {
             else
                 sb.append(st[i].substring(0, 1).toUpperCase()).append(st[i].substring(1).toLowerCase()).append(" ");
         }
-            
+         
+        //마지막 부분 문자열이 공백으로 올 경우의 수를 생각해야 함
          if (s.endsWith(" "))
             return sb.toString();
         else
