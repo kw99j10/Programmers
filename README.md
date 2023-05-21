@@ -1,2 +1,1 @@
-<h2>CodingTest Practice<h2>
-# programmers
+# CodingTest Practice -programmers
