@@ -9,7 +9,7 @@ class Solution {
         }
         for(String s:phone_book){
     
-          //부분문자열을 이용
+            //부분 문자열을 이용
             for(int i=0;i<s.length();i++){
                 if(h.contains(s.substring(0,i))){
                     answer=false;
