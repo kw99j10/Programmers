@@ -7,7 +7,7 @@ class Solution {
         int []k=new int[3];
         int count=0;
       
-        //문자 단위로 끊어서 계산하기 위한 변수 ex)1S 2D * 3T
+        //문자 단위로 끊어서 계산하기 위한 변수 ex)1S # 2D * 3T
         String number="";
 
         for (int i=0;i<dartResult.length();i++){
