@@ -15,7 +15,7 @@ class Solution {
             //가로의 길이 역시 3보다 크거나 같으므로
             if(k%i==0 && j>=3){
                 
-                //가로x세로의 크기가 yellow의 개수여야 함
+                //(구한 가로-2)x(구한 세로-2)의 크기가 yellow의 개수여야 함
                 if((i-2)*(j-2)==yellow){
                     answer[0]=Math.max(i,j);
                     answer[1]=Math.min(i,j);
