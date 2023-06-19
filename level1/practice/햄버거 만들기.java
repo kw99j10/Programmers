@@ -16,7 +16,7 @@ class Solution {
     }
 }
 
-#stack 풀이
+#stack 풀이 -->push 후 들어있는 숫자가 1,2,3,1 순서인지 확인
 import java.util.*;
 class Solution {
     public int solution(int[] ingredient) {
