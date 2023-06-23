@@ -11,10 +11,10 @@ class Solution {
                 h.put(clothes[i][1], h.get(clothes[i][1]) + 1; // 같다면 누적
             }
         }
-        int count = 1; //경우의 수를 구하기 위해 변수를 1로 설
+        int count = 1; //경우의 수를 구하기 위해 변수를 1로 설정
 
         for (Integer value : h.values()) {
-            count *= (value + 1); //value에 1을 더함: 안 입는 경우를 셈
+            count *= (value + 1); //value에 1을 더함: 안 입는 경우를 셈 --value: 의상 종류에 따른 누적 개수
         }
         answer = count - 1; //아무것도 입지 않은 경우의 수 1을 뺌
         return answer;
