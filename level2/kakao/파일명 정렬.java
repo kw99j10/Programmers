@@ -20,7 +20,7 @@ class Solution {
                     b=false;
                 }
                 else if(!b){
-                    break;
+                    break; //number는 한 글자에서 최대 다섯 글자 사이의 연속된 숫자로 이루어져 있으므로 숫자가 나오지 않을 시 break(추후 숫자가 나와도 포함하지 않기 위함)
                 }
                 else{
                     head+=c;
