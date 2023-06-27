@@ -40,10 +40,8 @@ class Solution {
                     answer[j]=k;
                 }
             }
-        }
-      
+
         //실패율이 같다면 index 오름차순 정렬
-        for (int i=0;i<answer.length;i++){
             int p;
             for (int j=i+1;j<answer.length;j++){
                 if (ans[j]==ans[i]){
@@ -54,7 +52,7 @@ class Solution {
                     }
                 }
             }
-        }
+        }  
         return answer;
     }
 }
