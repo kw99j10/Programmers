@@ -5,7 +5,7 @@ class Solution {
         var a=new ArrayList<String>(); //메시지를 담을 list
         var h=new HashMap<String,String>(); //id에 따른 name 을 담을 map
 
-        //닉네임을 변경한 기록을 담는 과
+        //닉네임을 변경한 기록을 담는 과정
         for(int i=0;i<record.length;i++){
             String []st=record[i].split(" ");
             if(st.length>2){
