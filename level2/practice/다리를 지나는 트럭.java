@@ -6,7 +6,7 @@ class Solution {
         var ready=new LinkedList<Integer>(); //다리를 지난 트럭을 담을 큐
 
         for (int i = 0; i < bridge_length; i++) {
-            ready.offer(0);
+            ready.offer(0); //다리의 길이만큼 ready q에 0을 넣는 이유: 다리의 길이=올라갈 수 있는 트럭의 수(0:트럭 없음)
         }
 
         int sum = 0;
@@ -23,7 +23,7 @@ class Solution {
             answer += 1;
             sum -= ready.poll(); //도착한 트럭 큐의 첫번째 요소를 제거
 
-            if (weight >= truck_weights[i] + sum) {
+            if (weight >= truck_weights[i] + sum) { //다리위 or 큐에 있는 트럭의 무게는 weight보다 작거나 같아야함
                 ready.offer(truck_weights[i]);
                 sum += truck_weights[i];
                 i += 1; //weight보다 작거나 같을 경우만 배열 index를 증가
