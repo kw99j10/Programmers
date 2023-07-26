@@ -30,12 +30,6 @@ class Solution {
                 }
             }
         }
-        for(int i=0;i<dp.length;i++){
-            for(int j=0;j<dp[i].length;j++){
-                System.out.print(dp[i][j]+" ");
-            }
-            System.out.println();
-        }
         answer = dp[maps.length - 1][maps[0].length - 1] == 0 ? -1 : dp[maps.length - 1][maps[0].length - 1]; //마지막 값이 0이라면 상대편 진영에 가지 못한 경우 이므로 -1을 return
         return answer;
     }
