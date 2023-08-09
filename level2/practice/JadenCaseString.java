@@ -1,7 +1,9 @@
 class Solution {
     public String solution(String s) {
+        
         StringBuilder sb=new StringBuilder();
         String []st=s.split(" ");
+        
         for (int i=0;i<st.length;i++){
 
             if (st[i].length()==0) == (st[i].equals("")
