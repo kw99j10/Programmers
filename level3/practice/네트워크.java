@@ -20,3 +20,37 @@ class Solution {
         }
     }
 }
+
+# 2 bfs 풀이
+import java.util.*;
+class Solution {
+    public int solution(int n, int[][] computers) {
+        int answer = 0;
+        
+        boolean []b=new boolean[n];
+        var q=new LinkedList<Integer>(); 
+        
+        //bfs
+        for(int j=0;j<n;j++){
+            q.add(j); //queue에 index 순으로 삽입
+            
+            if(b[j]){
+                continue; //현재 node의 연결 여부를 확인
+            }
+            b[j]=true;
+            
+            while(!q.isEmpty()){
+                int tmp=q.poll();
+                for (int i=0;i<computers[tmp].length;i++){
+                    if (computers[tmp][i]==0 || b[i]){
+                        continue; //연결되지 않았거나 이미 방문 했으면 검사에서 제외
+                    }
+                    q.add(i); //연결된 노드를 queue에 넣고 while문 실행
+                    b[i]=true; //방문 확인
+                }
+            }
+            answer+=1; //반복문의 종료=네트워크 수
+        }
+        return answer;
+    }
+}
