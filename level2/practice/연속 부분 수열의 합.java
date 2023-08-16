@@ -35,3 +35,37 @@ class Solution {
         return answer;
     }
 }
+
+#2
+class Solution {
+    public int[] solution(int[] sequence, int k) {
+        int[] answer = new int[2];
+        
+        int left = 0; //시작 인덱스
+        int right = 0; //종료 인덱스
+
+        int sum = 0; //시작 인덱스부터 종료 인덱스까지의 합
+        int min = 1000001; //나올 수 있는 최대값
+
+        //종료 인덱스가 배열의 끝에 도달할 시 반복문 종료
+        while (right < sequence.length) {
+
+            sum += sequence[right]; 
+            right += 1; //인덱스 범위를 늘려나감
+
+            while (sum > k) {
+                sum -= sequence[left];
+                left += 1; //인덱스의 범위가 k를 넘어가면 시작 인덱스를 sum에서 뺀 후 인덱스 증가
+            }
+
+            if (sum == k) {
+                if (min > right - left) {
+                    min = right - left; //길이가 제일 짧은 인덱스 범위를 리턴하기 위함
+                    answer[0] = left;
+                    answer[1] = right - 1;
+                }
+            }
+        }
+        return answer;
+    }
+}
