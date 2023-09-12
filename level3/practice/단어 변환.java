@@ -4,14 +4,14 @@ class Solution {
         int answer = 0;
         
         var a = new ArrayList<>(Arrays.asList(words));
-        Collections.sort(a);
+        Collections.sort(a); // begin에서 target으로 변환하는 가장 짧은 변환 과정을 찾기 위해 리스트 정렬
 
         int i = 0;
         while(!begin.equals(target)) {
 
             if (i >= a.size() - 1) {
-                answer = 0; //한 번에 한개의 알파벳만 바꿀 수 없거나 target이 없는 경우 종료
-                break;
+                answer = 0; 
+                break; //target이 없거나 target에 도달할 수 없는 경우 종료
             }
 
             int count = 0;
