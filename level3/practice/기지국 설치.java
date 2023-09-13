@@ -8,7 +8,7 @@ class Solution {
         while (position<=n){
 
             if (idx<stations.length && position>=stations[idx]-w) {
-                position = stations[idx] + w + 1; // 해당 위치가 기지국 범위에 존재한다면 범위 밖으로 이동
+                position = stations[idx] + w + 1; // 해당 위치가 기지국 범위(stations[idx]+w,stations[idx]-w) 에 존재한다면 범위 밖으로 이동
                 idx += 1; // 이동 후 배열 인덱스 증가
             }
             else {
