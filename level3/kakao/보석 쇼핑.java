@@ -32,9 +32,9 @@ class Solution {
                   location+=1; //중복이 있다면 앞에서부터 제거하며 위치를 증가해 나감 
             }
 
-            
-            if(s.size()==h.size() && end>q.size()){ // (end>q.size())조건: 시작 진열대 번호가 가장 작은 구간을 구하기 위함
-                end=q.size();
+            //시작 진열대 번호가 가장 작은 구간을 구하기 위함
+            if(s.size()==h.size() && end>q.size()){
+                end=q.size(); //그 이후에 나오는 보석은 중복되므로 계산 X
                 start=location; //보석의 종류와 개수가 같아졌다면 해당 범위까지를 구간으로 설정함
             }
         }
