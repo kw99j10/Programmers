@@ -64,7 +64,7 @@ class Solution {
                 int distance_x = x + ints[0];
                 int distance_y = y + ints[1];
 
-                //게임판 안에 있으면서 장애물을 만나기 전까지 반복문 실행
+                //게임판 안에 있으면서 장애물을 만나기 전까지 반복문을 실행함
                 while ((distance_x >= 0 && distance_x < stage[0].length) &&
                         (distance_y >= 0 && distance_y < stage.length) &&
                         !stage[distance_y][distance_x].equals("D")) {
